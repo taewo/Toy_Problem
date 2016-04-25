@@ -369,6 +369,32 @@ console.log(sc(apple))
 
 
 
+/**
+* Given an arbitrary input string, return the first nonrepeated character in
+* the string. For example:
+*
+*   firstNonRepeatedCharacter('ABA'); // => 'B'
+*   firstNonRepeatedCharacter('AACBDB'); // => 'C'
+*/
+
+var firstNonRepeatedCharacter = function(string) {
+ 
+	var firstLetter = string[0];
+	var result;
+
+	for(var i=0; i<string.length; i++){
+		if(firstLetter !== string[i]){
+			result = string[i];
+			break;
+		}
+	}
+	return result;
+};
+
+console.log(firstNonRepeatedCharacter('AAAAPDDPP'));
+console.log(firstNonRepeatedCharacter('DDDRRRVV'));
+console.log(firstNonRepeatedCharacter('DFHTH'));
+
 
 
 
